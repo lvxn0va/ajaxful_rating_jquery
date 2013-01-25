@@ -34,7 +34,6 @@ module AjaxfulRating # :nodoc:
             $.ajax({
               type: $(this).attr('data-method'),
               url: $(this).attr('href'),
-              beforeSend: function(xhr) {xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'))},
               data: {
                       stars: $(this).attr('data-stars'),
                       dimension: $(this).attr('data-dimension'),
